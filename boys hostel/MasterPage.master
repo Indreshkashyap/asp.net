@@ -1,0 +1,95 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">  <style type="text/css">
+         #myLinks {  display:none;
+         }  </style>
+
+    <title>Boys Hostel</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+      
+  
+    </asp:ContentPlaceHolder>
+</head>
+<body style="border: 1px solid black;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;">
+<form id="form1" runat="server" >
+ <script type ="text/javascript">
+     function myFunction() {
+         var x = document.getElementById("myLinks");
+         if (x.style.display === "block") {
+             x.style.display = "none";
+         } else {
+             x.style.display = "block";
+         }
+     } </script> 
+
+  
+     <div style="color: #FFFFFF; background-color: #990000;text-align:center; font-size: xx-large; width:100%;  font-family: 'Bookman Old Style';">
+ <br /> BOYS HOSTEL BILASPUR(CG)    <br />
+ <a style="text-decoration:none;" href="javascript:void(0);" onclick="myFunction()">
+<div style="text-align:center";><div style="
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;"> </div>
+  <div style="
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;"> </div>
+  <div style="
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;"> </div>
+  </div>
+  </a>
+ 
+      <div style="text-align:center;"> <div style=" font-size: xx-small;margin-left:19%;margin-right:18%;">
+         <div id="myLinks">
+  <asp:Menu ID="Menu1" 
+               runat="server" 
+            Orientation="Horizontal" DynamicEnableDefaultPopOutImage="False" 
+               Font-Names="Agency FB" Font-Size="Large" Font-Strikeout="False"
+               ForeColor="White" meta:resourcekey="Menu1Resource1" >
+               <DynamicHoverStyle Font-Bold="True" Font-Strikeout="False" />      
+                <DynamicMenuItemStyle BorderStyle="Solid" BorderColor="Yellow" BackColor="Aqua" 
+                 HorizontalPadding="14px" Width="100px" ForeColor="#000066" Font-Size="Small" />
+            <Items>
+                <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/Default7.aspx" 
+                    meta:resourcekey="MenuItemResource1"></asp:MenuItem>
+                <asp:MenuItem Text="STUDENT" Value="STUDENT" 
+                    meta:resourcekey="MenuItemResource4" Selectable="False">
+                    <asp:MenuItem Text="REGISTRATION" Value="REGISTRATION" 
+                        NavigateUrl="~/Default2.aspx" meta:resourcekey="MenuItemResource2">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="LOGIN" Value="LOGIN" NavigateUrl="~/Default16.aspx" 
+                        meta:resourcekey="MenuItemResource3"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="GALLERY" Value="PHOTO GALLERY" 
+                    NavigateUrl="~/Default4.aspx" meta:resourcekey="MenuItemResource5"></asp:MenuItem>
+                <asp:MenuItem Text="ABOUT" Value="ABOUT" NavigateUrl="~/Default5.aspx" 
+                    meta:resourcekey="MenuItemResource6"></asp:MenuItem>
+                <asp:MenuItem Text="CONTACT " Value="CONTACT " NavigateUrl="~/Default8.aspx" meta:resourcekey="MenuItemResource7" 
+                   ></asp:MenuItem>
+            </Items>
+               <StaticHoverStyle Font-Bold="True" />
+            <StaticMenuItemStyle 
+                BorderStyle="Solid" Font-Bold="False" Font-Overline="False" 
+                Font-Strikeout="False" Font-Underline="False" 
+                   ForeColor="White" BackColor="#990000" BorderColor="#FF9900" 
+                   HorizontalPadding="14px" Width="100px" />
+        </asp:Menu></div> 
+           </div></div> </div>
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+     </asp:ContentPlaceHolder>
+     <div style="background-color:#990000; width:100%;color: #FFFFFF; height:40px;padding-top:10px"> 
+            <p style="text-align:center">&copy;Indresh Kashyap</p>
+  </div>
+    </form>
+    </body>
+</html>
