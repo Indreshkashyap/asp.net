@@ -1,0 +1,22 @@
+Imports System.Data.SqlClient
+Partial Class Default2
+    Inherits System.Web.UI.Page
+    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim myConn As SqlConnection = New SqlConnection("Server=sql.freeasphost.net\MSSQL2016;Database=indresh_database;uid=indresh;pwd=12345abcd;")
+myConn.Open()
+        Dim cmd As SqlCommand = New SqlCommand("drop TABLE mca ;", myConn)
+     cmd.ExecuteNonQuery()
+        myConn.Close()
+    End Sub
+End Class
+
+
+
+
+
+
+
+
+
+
+

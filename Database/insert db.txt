@@ -1,0 +1,15 @@
+Imports System.Data.SqlClient
+Partial Class _Default
+    Inherits System.Web.UI.Page
+
+    Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
+         Dim myConn As SqlConnection = New SqlConnection("Server=sql.freeasphost.net\MSSQL2016;Database=indresh_database;uid=indresh;pwd=12345abcd;")
+myConn.Open()
+       Dim date3 As String = Date.Now
+        Dim cmd As SqlCommand = New SqlCommand("insert into mca (comment,comdate) values('" & TextBox1.Text & "','" & date3 & "');", myConn)
+     cmd.ExecuteNonQuery()
+        myConn.Close()
+       Response.Write("<script>alert('submitted');</script>")
+ TextBox1.Text = ""
+    End Sub
+End Class

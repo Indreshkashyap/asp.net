@@ -1,0 +1,14 @@
+Imports System.Data.SqlClient
+Partial Class Default2
+    Inherits System.Web.UI.Page
+    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim myConn As SqlConnection = New SqlConnection("Server=sql.freeasphost.net\MSSQL2016;Database=indresh_database;uid=indresh;pwd=12345abcd;")
+myConn.Open()
+Dim olda As SqlDataAdapter = New SqlDataAdapter("select * from mca;", myConn)
+        Dim dt As Data.DataTable = New Data.DataTable()
+        olda.Fill(dt)
+        GridView1.DataSource = dt
+        GridView1.DataBind()
+        myConn.Close()
+    End Sub
+End Class
